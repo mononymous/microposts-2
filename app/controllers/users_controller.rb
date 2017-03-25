@@ -26,8 +26,6 @@ class UsersController < ApplicationController
   end
 
   def update
-    validates  :profile, length: { maximum: 50 }, on: :update
-      
     if @user.update(user_params)
       redirect_to @user
     else
