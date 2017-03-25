@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   end
   
   def show # 追加
+    @microposts = @user.microposts.order(created_at: :desc)
   end
   
   def new
