@@ -8,8 +8,10 @@
     </section>
     <h3>Region</h3>
       <%= @user.region %>
-      <h3>Profile</h3>
+    <h3>Profile</h3>
       <%= @user.profile %>
+      <h3><%= link_to "Followings" , followings_user_path(@user)%></h3>
+      <h3><%= link_to "Followers" , followers_user_path(@user)%></h3>
   </aside>
   <div class="col-md-8">
     <%= render 'follow_form' if logged_in? %>
